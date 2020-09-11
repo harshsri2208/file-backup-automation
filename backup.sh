@@ -1,3 +1,6 @@
+# enter the directory
+cd ~/crio-surprise-challenge/file-backup-automation
+
 # fetch remote repos
 git fetch --prune
 
