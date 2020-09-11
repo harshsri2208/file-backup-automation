@@ -3,4 +3,5 @@ This small automation tool was built to test automation of running scripts via c
 
 The bash file contains instructions for fetching, commiting and pushing the changes
 
-The crontab task was added to run this file every 30 minutes 
+The crontab task was added to run this file every 5 minutes
+ 
