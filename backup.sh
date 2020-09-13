@@ -7,11 +7,19 @@ git fetch --prune
 # checkout to master branch
 git checkout master
 
-# add modified changes
-git add .
+git diff --quiet; nochanges=$?
 
-# commit changes
-git commit -m "auto backup"
+if [ $nochanges -eq 1 ]; then
+    # there are changes
 
-# push changes
-git push -u origin master
+    # add modified files
+    git add .
+
+    # commit changes
+    git commit -m "auto backup"
+
+    # push changes
+    git push -u origin master
+
+fi
+
