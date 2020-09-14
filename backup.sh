@@ -12,14 +12,11 @@ git diff --quiet; nochanges=$?
 if [ $nochanges -eq 1 ]; then
     # there are changes
 
-    # getting current time
-    ctime = $(date)
-
     # add modified files
     git add .
 
     # commit changes
-    git commit -m "auto backup $ctime"
+    git commit -m "auto backup $(date)"
 
     # push changes
     git push -u origin master
